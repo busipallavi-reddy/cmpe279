@@ -70,6 +70,13 @@ int main(int argc, char const *argv[])
     }
     else if (current_pid > 0)
     {
+	printf("In parent process waiting for child to finish. \n");
+	int wait_id;
+	if((wait_id = wait(NULL)) < 0)
+	{
+            perror("Wait error");
+            exit(EXIT_FAILURE);
+        }
         printf("In parent process with current_pid %d \n", current_pid);
     }
     else
