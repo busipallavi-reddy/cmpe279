@@ -5,7 +5,7 @@
 #include <netinet/in.h> 
 #include <string.h> 
 #include <sys/wait.h>
-#define PORT 8080 
+
 int main(int argc, char const *argv[]) 
 {
     printf("In newly execd child with uid %d \n", getuid());
